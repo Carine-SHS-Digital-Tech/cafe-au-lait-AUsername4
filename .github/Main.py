@@ -14,6 +14,7 @@ while P == 'E':
         quantdict = {}
         pricedict = {}
         totaldict = {}
+        truetotal = {}
         order = input("Would you like to order (y) yes or (n) no?: ")
         while order.lower() == 'y':
             coffee = input("What coffee would you like to order?: ")
@@ -30,7 +31,7 @@ while P == 'E':
                 print(quantdict)
                 print(pricedict)
                 total = pricedict['Cappuccino']+tgst
-                totaldict['cappuccino'] = total
+                totaldict['Cappuccino'] = total
                 print(totaldict)
             elif coffee == '2':
 
@@ -81,7 +82,12 @@ while P == 'E':
             dineortake = input("""Would you like to dine in?(1) or take away?(2): 
 Take away will incur an aditional 5% surcharge: """)
             if dineortake == '2':
-                print("hello <3")
+                numtotal = 0
+                for item in totaldict:
+                    numtotal = numtotal + totaldict[item]
+                gsttotal = feedict[2]*numtotal
+                truetotal = gsttotal+gsttotal
+                print(truetotal)
 
             else:
                 print("Thank you for eating with us, find your recipet bellow:")
