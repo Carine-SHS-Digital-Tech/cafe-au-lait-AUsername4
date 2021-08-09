@@ -66,6 +66,9 @@ while P == 'E':
             order = input("Would you like to order (y) yes or (n) no?: ")
             dineortake = input("Would you like to dine in?(1) or take away?(2): ")
             if dineortake = '2':
+
+            else:
+                print("Thank you for eating with us, find your recipet bellow:")
         else:
             print("End")
     elif neworsum == '2':
