@@ -13,6 +13,7 @@ while P == 'E':
         feedict = {1: 0.1, 2: 0.05}
         quantdict = {}
         pricedict = {}
+        totaldict = {}
         order = input("Would you like to order (y) yes or (n) no?: ")
         while order.lower() == 'y':
             coffee = input("What coffee would you like to order?: ")
@@ -28,6 +29,9 @@ while P == 'E':
                 print(round(tgst, 3))
                 print(quantdict)
                 print(pricedict)
+                total = pricedict['Cappuccino']+tgst
+                totaldict['cappuccino'] = total
+                print(totaldict)
             elif coffee == '2':
 
                 price = cofdict[2]*amount
@@ -39,6 +43,9 @@ while P == 'E':
                 print(round(tgst, 3))
                 print(quantdict)
                 print(pricedict)
+                total = pricedict['Espresso']+tgst
+                totaldict['Espresso'] = total
+                print(totaldict)
             elif coffee == '3':
 
                 price = cofdict[3]*amount
@@ -50,6 +57,9 @@ while P == 'E':
                 print(round(tgst, 3))
                 print(quantdict)
                 print(pricedict)
+                total = pricedict['Latte']+tgst
+                totaldict['Latte'] = total
+                print(totaldict)
             elif coffee == '4':
 
                 price = cofdict[4]*amount
@@ -61,11 +71,17 @@ while P == 'E':
                 print(round(tgst, 3))
                 print(quantdict)
                 print(pricedict)
+                total = pricedict['Iced Coffee']+tgst
+                totaldict['Iced Coffee'] = total
+                print(totaldict)
             else:
                 print("That is not a valid ")
             order = input("Would you like to order (y) yes or (n) no?: ")
-            dineortake = input("Would you like to dine in?(1) or take away?(2): ")
-            if dineortake = '2':
+
+            dineortake = input("""Would you like to dine in?(1) or take away?(2): 
+Take away will incur an aditional 5% surcharge: """)
+            if dineortake == '2':
+                print("hello <3")
 
             else:
                 print("Thank you for eating with us, find your recipet bellow:")
